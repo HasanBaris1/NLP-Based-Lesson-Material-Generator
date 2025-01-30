@@ -1,0 +1,23 @@
+
+Projede, amacım videoları anlamlı ve yapılandırılmış ders içeriğine dönüştürmekti.
+ Bunun için aşağıdaki adımları ve yaklaşımları kullandım:
+
+
+1. Kullanılan Promptlar:
+Ders içeriği oluşturma: Modelin uzun metni ders içeriği formatına dönüştürmesi için özel bir prompt kullandım. 
+Bu prompt, modelin metni bölerek, açık ve anlaşılır bir şekilde Giriş, Ana İçerik, Örnekler ve Sonuç gibi bölümler oluşturmasını sağladı. 
+
+
+2. Token Limitleri Yönetimi:
+Metin Bölme: Modelin girdi token sınırlarını aşmamak için uzun metinleri 400 karakterlik parçalara böldüm.
+Bu parçalar modelin token limitine uygun hale getirildi. 
+
+
+3. Karşılaşılan Zorluklar ve Çözümler:
+Performans Sorunları: Uzun metinlerle çalışırken, işlem süresinin uzun olması ve belleğin etkilenmesi gibi performans sorunları yaşadım.
+Bu durumu hafifletmek için metinleri daha küçük parçalara ayırdım, böylece işlem süresi daha yönetilebilir hale geldi.
+
+Çıktıların Düzenlenmesi: Modelin çıktılarında HTML etiketleri veya bağlantılar bulunabiliyordu. 
+Bu durumu, metnin sadece öğretici ve bilgi odaklı olmasını sağlayacak şekilde promptları geliştirerek çözdüm.
+Tekrarlar ve Alakasız İçerik: Model bazen gereksiz tekrarlar yapabiliyor veya alakasız içerikler ekleyebiliyordu.
+ Bu sorunları önlemek için çıktılara sıkı filtreleme ekledim, böylece model yalnızca gerekli olan ve ilgili bilgileri sundu.
